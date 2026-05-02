@@ -1,0 +1,4 @@
+# Python packages needed to run this portfolio
+# Install all at once: pip install -r requirements.txt
+
+flask==3.0.0

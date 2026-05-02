@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sruthi Medavarapu — Full Stack Developer</title>
+
+  <!-- Google Fonts: Playfair Display (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Our custom CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+       NAVBAR — Fixed top navigation bar
+  ════════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Name -->
+      <a href="#home" class="nav-logo">SM<span class="dot">.</span></a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#projects"class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger icon for mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 1 — HOME (Hero Section)
+       First thing a recruiter sees — must grab attention
+  ════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <!-- Decorative background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="hero-content">
+      <p class="hero-greeting animate-fade-up">Hello, I'm</p>
+      <h1 class="hero-name animate-fade-up delay-1">Sruthi <span class="accent">Medavarapu</span></h1>
+      <p class="hero-role animate-fade-up delay-2">
+        Fresher Full Stack Developer
+        <span class="role-divider">|</span>
+        <span class="typing-text" id="typingText">MCA Graduate</span>
+      </p>
+      <p class="hero-desc animate-fade-up delay-3">
+        I build clean, functional web applications using Python, JavaScript, and SQL —
+        focused on writing readable code and solving real-world problems.
+      </p>
+
+      <div class="hero-buttons animate-fade-up delay-4">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact"  class="btn btn-outline">Get In Touch</a>
+      </div>
+
+      <!-- Quick stats row -->
+      <div class="hero-stats animate-fade-up delay-5">
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">9.24</span>
+          <span class="stat-label">GPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 2 — ABOUT
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-label">Who I Am</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left: Text content -->
+        <div class="about-text">
+          <p class="about-intro">
+            I'm a recent <strong>MCA graduate from Hyderabad</strong> with a passion for
+            building things that work — clean, functional, and maintainable web applications.
+          </p>
+          <p>
+            My journey into tech started with a BSc in Mathematics, Statistics &amp; Computer Science,
+            which gave me a strong analytical foundation. During my MCA, I discovered a love for
+            <strong>full-stack development</strong> — seeing both the logic behind systems and the
+            interface people actually use.
+          </p>
+          <p>
+            I enjoy writing code that is easy to read, easy to explain, and solves a real problem.
+            I'm currently looking for a <strong>fresher developer role</strong> where I can keep
+            learning, contribute to a team, and grow into a well-rounded engineer.
+          </p>
+
+          <!-- Education cards -->
+          <div class="education-cards">
+            <div class="edu-card">
+              <span class="edu-icon">🎓</span>
+              <div class="edu-info">
+                <strong>MCA — Master of Computer Applications</strong>
+                <span>Omega PG College, Hyderabad &nbsp;|&nbsp; 2023 – 2025</span>
+              </div>
+            </div>
+            <div class="edu-card">
+              <span class="edu-icon">🏅</span>
+              <div class="edu-info">
+                <strong>BSc — Maths, Statistics &amp; Computer Science</strong>
+                <span>Govt. Degree College for Women, Hyderabad &nbsp;|&nbsp; GPA: 9.24 / 10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Certifications + achievements -->
+        <div class="about-side">
+          <div class="card side-card">
+            <h3 class="card-title">📜 Certifications</h3>
+            <ul class="cert-list">
+              <li>Python Full Stack Development</li>
+              <li>RDBMS &amp; MySQL</li>
+              <li>Statistical Methods Using R</li>
+            </ul>
+          </div>
+
+          <div class="card side-card">
+            <h3 class="card-title">🏆 Achievements</h3>
+            <ul class="cert-list">
+              <li>🥈 2nd Prize — District-Level Essay Competition</li>
+              <li>📈 9.24 GPA — Strong academic track record</li>
+              <li>💻 Built 3 end-to-end projects independently</li>
+            </ul>
+          </div>
+
+          <div class="card side-card cta-card">
+            <p>Open to fresher full-stack and backend developer roles</p>
+            <a href="#contact" class="btn btn-primary" style="margin-top:1rem;display:inline-block;">
+              Let's Connect
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 3 — SKILLS
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-label">What I Know</p>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+
+      <!-- Skill categories as cards -->
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">💻</div>
+          <h3>Programming Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">C#</span>
+            <span class="tag">R</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🌐</div>
+          <h3>Web Technologies</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Django</span>
+            <span class="tag">Flask</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🗄️</div>
+          <h3>Database</h3>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">SQL Queries</span>
+            <span class="tag">Joins</span>
+            <span class="tag">Schema Design</span>
+            <span class="tag">Stored Procedures</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend / .NET</h3>
+          <div class="skill-tags">
+            <span class="tag">Flask APIs</span>
+            <span class="tag">REST API</span>
+            <span class="tag">C# Basics</span>
+            <span class="tag">.NET Fundamentals</span>
+            <span class="tag">OOP Concepts</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🛠️</div>
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Visual Studio</span>
+            <span class="tag">MySQL Workbench</span>
+            <span class="tag">Agile / SDLC</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🤝</div>
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Critical Thinking</span>
+            <span class="tag">Attention to Detail</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Quick Learner</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 4 — PROJECTS
+       Loaded dynamically from Flask API (/api/projects)
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">
+          Each project is built end-to-end — from database design to the user interface.
+        </p>
+      </div>
+
+      <!-- Projects will be injected here by JavaScript -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Loading state shown while API call is in progress -->
+        <div class="loading-state" id="projectsLoading">
+          <div class="spinner"></div>
+          <p>Loading projects...</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 5 — CONTACT
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-label">Say Hello</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          I'm actively looking for fresher developer roles. Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Contact info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:sruthimedavarapu26@gmail.com">sruthimedavarapu26@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Hyderabad, India</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/sruthimedavarapu" target="_blank">github.com/sruthimedavarapu</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="#" target="_blank">linkedin.com/in/sruthimedavarapu</a>
+            </div>
+          </div>
+
+          <div class="availability-badge">
+            <span class="green-dot"></span>
+            Available for fresher roles &amp; internships
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g. Job Opportunity at XYZ" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Hi Sruthi, I'd like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              Send Message 🚀
+            </button>
+
+            <!-- Success / error message shown after submit -->
+            <div class="form-feedback" id="formFeedback"></div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Sruthi Medavarapu</strong> · 2025</p>
+    <p class="footer-sub">Flask · SQLite · HTML · CSS · JavaScript</p>
+  </footer>
+
+
+  <!-- Our JavaScript file (loaded at bottom so HTML loads first) -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
